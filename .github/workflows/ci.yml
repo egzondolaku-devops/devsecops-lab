@@ -1,17 +1,13 @@
-name: CI
+name: Run Python Tests
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on: [push, pull_request]
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check out code
+    - name: Checkout repo
       uses: actions/checkout@v3
 
     - name: Set up Python
